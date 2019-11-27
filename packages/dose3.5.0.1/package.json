@@ -9,7 +9,7 @@
       "./configure"
     ],
     [
-      "make",
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}",
       "printconf"
     ],
     [
