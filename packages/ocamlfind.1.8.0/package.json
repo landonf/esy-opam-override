@@ -19,11 +19,11 @@
       "-no-topfind"
     ],
     [
-      "make",
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}",
       "all"
     ],
     [
-      "make",
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}",
       "opt"
     ]
   ],

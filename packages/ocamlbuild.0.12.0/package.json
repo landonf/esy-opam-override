@@ -6,7 +6,7 @@
       "#{os == 'windows' ? 'patch -p1 < ocamlbuild-0.12.0.patch' : 'true'}"
     ],
     [
-      "%{make}%",
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}",
       "-f",
       "configure.make",
       "all",
@@ -18,7 +18,7 @@
       "OCAMLBUILD_NATIVE_TOOLS=true"
     ],
     [
-      "%{make}%",
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}",
       "check-if-preinstalled",
       "all",
       "#{os == 'windows' ? 'install' : 'opam-install'}"
