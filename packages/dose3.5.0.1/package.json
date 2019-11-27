@@ -15,7 +15,7 @@
     [
       "bash",
       "-c",
-      "#{(os == 'windows' ? 'make' : (os == 'linux' ? 'make libs' : 'gmake libs')}"
+      "#{os == 'windows' ? 'make' : (os == 'linux' ? 'make libs' : 'gmake libs')}"
     ]
   ]
 }
