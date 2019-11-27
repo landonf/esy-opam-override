@@ -9,7 +9,7 @@
       "#{os == 'windows' ? $PATCH_CMD : 'true'}"
     ],
     [
-      "make"
+      "#{(os == 'windows' || os == 'linux') ? 'make' : 'gmake'}"
     ]
   ]
 }
